@@ -1,0 +1,24 @@
+.details {
+  width: 300px;
+  background: #F3ECC8;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.completed {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: center;
+}
+
+p {
+  font-family: arial;
+  margin-top: 10px;
+  font-size: 15px;
+
+}
+
+.fa {
+  font-size: 20px;
+}

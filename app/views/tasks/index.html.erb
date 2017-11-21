@@ -1,0 +1,27 @@
+
+
+<div class="container">
+  <div class="row">
+    <h1>My Tasks</h1>
+    <% @tasks.each do |task| %>
+      <div class="tasks">
+        <p>
+          <% if task.completed %>
+            <i class="fa fa-check-square" aria-hidden="true"></i>
+          <% else %>
+            <i class="fa fa-square-o" aria-hidden="true"></i>
+          <% end %>
+        </p>
+        <p><%= link_to task.title, task_path(task) %></p>
+        <%= link_to ' <i class="fa fa-trash" aria-hidden="true"></i>'.html_safe, task_path(task),
+              method: :delete,
+              data: { confirm: "Are you sure?" } %>
+      </div>
+    <% end %>
+    <div class="btn btn-warning">
+    <p><%= link_to "Add a new task", new_task_path %></p>
+    </div>
+  </div>
+</div>
+
+
